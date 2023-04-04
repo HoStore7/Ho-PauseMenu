@@ -31,13 +31,14 @@ window.addEventListener('message', function (event) {
             document.documentElement.style.setProperty('--box-shadow', `rgba(`+ Colorc0 +`, `+ Colorc1 +`, `+ Colorc2 +`, 0.39)`);
             document.documentElement.style.setProperty('--Color', `rgb(`+ Colorc0 +`, `+ Colorc1 +`, `+ Colorc2 +`)`);
 
+            
             document.getElementById("Resume").innerHTML = v.Config.Settings.Choice[0];
             document.getElementById("Map").innerHTML = v.Config.Settings.Choice[1];
             document.getElementById("Settings").innerHTML = v.Config.Settings.Choice[2];
             document.getElementById("KeyBindings").innerHTML = v.Config.Settings.Choice[3];
             document.getElementById("Exit").innerHTML = v.Config.Settings.Choice[4];
-
-
+            document.querySelector('.Options').style.fontFamily = v.Config.Settings.Choice[5];
+	    console.log("Done", v.Config.Settings.Choice[0], v.Config.Settings.Choice[1])
         break;
 
         case "Time":
@@ -130,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         message: {
             get() {
                 $.post(`https://${GetParentResourceName()}/${GetParentResourceName()}`)
-                //$("body").html(``)
+                $("body").html(``)
             }
         },
         toString: {
