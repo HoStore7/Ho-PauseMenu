@@ -30,15 +30,21 @@ window.addEventListener('message', function (event) {
             var Colorc2 = v.Config.Settings.Color[2] 
             document.documentElement.style.setProperty('--box-shadow', `rgba(`+ Colorc0 +`, `+ Colorc1 +`, `+ Colorc2 +`, 0.39)`);
             document.documentElement.style.setProperty('--Color', `rgb(`+ Colorc0 +`, `+ Colorc1 +`, `+ Colorc2 +`)`);
-
-            
+        
             document.getElementById("Resume").innerHTML = v.Config.Settings.Choice[0];
             document.getElementById("Map").innerHTML = v.Config.Settings.Choice[1];
             document.getElementById("Settings").innerHTML = v.Config.Settings.Choice[2];
             document.getElementById("KeyBindings").innerHTML = v.Config.Settings.Choice[3];
             document.getElementById("Exit").innerHTML = v.Config.Settings.Choice[4];
-            document.querySelector('.Options').style.fontFamily = v.Config.Settings.Choice[5];
-	    console.log("Done", v.Config.Settings.Choice[0], v.Config.Settings.Choice[1])
+            
+            document.documentElement.style.setProperty('--Font', v.Config.Settings.Choice[5]);
+            //document.getElementById("Resume").style.fontFamily = v.Config.Settings.Choice[5];
+            //document.getElementById("Map").style.fontFamily = v.Config.Settings.Choice[5];
+            //document.getElementById("Settings").style.fontFamily = v.Config.Settings.Choice[5];
+            //document.getElementById("KeyBindings").style.fontFamily = v.Config.Settings.Choice[5];
+            //document.getElementById("Exit").style.fontFamily = v.Config.Settings.Choice[5];
+            
+
         break;
 
         case "Time":
